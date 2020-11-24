@@ -6157,23 +6157,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jtorres\\.nuget\\packages\\": {},
+    "C:\\Users\\sistemas13\\.nuget\\packages\\": {},
     "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jtorres\\source\\repos\\WebApi_CottonKnit\\WebApi_CottonKnit\\WebApi_CottonKnit.csproj",
+      "projectUniqueName": "D:\\Maycol\\Repos\\WebCK_API\\WebApi_CottonKnit\\WebApi_CottonKnit.csproj",
       "projectName": "WebApi_CottonKnit",
-      "projectPath": "C:\\Users\\jtorres\\source\\repos\\WebApi_CottonKnit\\WebApi_CottonKnit\\WebApi_CottonKnit.csproj",
-      "packagesPath": "C:\\Users\\jtorres\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jtorres\\source\\repos\\WebApi_CottonKnit\\WebApi_CottonKnit\\obj\\",
+      "projectPath": "D:\\Maycol\\Repos\\WebCK_API\\WebApi_CottonKnit\\WebApi_CottonKnit.csproj",
+      "packagesPath": "C:\\Users\\sistemas13\\.nuget\\packages\\",
+      "outputPath": "D:\\Maycol\\Repos\\WebCK_API\\WebApi_CottonKnit\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\jtorres\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\sistemas13\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -6186,6 +6186,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {}
         }
       },
@@ -6197,6 +6198,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "Dapper": {
             "target": "Package",
@@ -6233,7 +6235,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }
