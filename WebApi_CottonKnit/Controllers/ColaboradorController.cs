@@ -4,36 +4,37 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using WebApi_CottonKnit.Modelos;
 using WebApi_CottonKnit.Repositorios;
 
 namespace WebApi_CottonKnit.Controllers
 {
-    //[Route("api/[controller]")]
-    //[ApiController]
-    [Produces("application/json")]
-    public class ColaboradorController : ControllerBase
+    [ApiController]
+    [Route("api/[controller]")]
+    //[Produces("application/json")]
+    public class ColaboradorController : Controller
     {
-        IColaboradorRepository colaboradorRepository;
-        public ColaboradorController(IColaboradorRepository _colaboradorRepository)
+        ICrudRepository<Colaborador> colaboradorRepository;
+        public ColaboradorController(ICrudRepository<Colaborador> _colaboradorRepository)
         {
             colaboradorRepository = _colaboradorRepository;
         }
-        [Route("api/GetColaboradorList")]
-        //[HttpGet]
+        //[Route("api/GetColaboradorList")]
+        [HttpGet]
         public IActionResult GetColaboradorList()
         {
-            var result = colaboradorRepository.GetColaboradorList();
+            var result = colaboradorRepository.GetColaboradorAll();
             if (result == null)
             {
                 return NotFound();
             }
             return Ok(result);
         }
-        [Route("api/GetColaboradorDetails/{idCol}")]
-        //[HttpGet]
-        public IActionResult GetColaboradorDetails(int idcol)
+        //[Route("api/GetColaboradorDetails/{idCol}")]
+        [HttpGet("{id}")]
+        public IActionResult GetColaboradorDetails(int id)
         {
-            var result = colaboradorRepository.GetColaboradorDetails(idcol);
+            var result = colaboradorRepository.GetColaboradorDetail(id);
             if (result == null)
             {
                 return NotFound();
