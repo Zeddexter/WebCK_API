@@ -29,7 +29,7 @@ namespace WebApi_CottonKnit
         {
             services.AddTransient<ICrudRepository<Colaborador>, ColaboradorRepository>();
             services.AddTransient<ICrudRepository<UsersApi>, UsersApiRepository>();
-            //services.AddSingleton<IConfiguration>(Configuration);
+            //services.AddSingleton<IConfiguration>(Configuration);  
             services.AddCors(options =>
             {
                 options.AddPolicy("AllowAnyCorsPolicy", policy => policy.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
