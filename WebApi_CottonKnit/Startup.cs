@@ -28,7 +28,7 @@ namespace WebApi_CottonKnit
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddTransient<ICrudRepository<Colaborador>, ColaboradorRepository>();
-            services.AddTransient<IRepDespachos, RepDespachosRepository>();
+            services.AddTransient<ICrudRepository<UsersApi>, UsersApiRepository>();
             //services.AddSingleton<IConfiguration>(Configuration);
             services.AddCors(options =>
             {

@@ -23,7 +23,7 @@ namespace WebApi_CottonKnit.Controllers
         [HttpGet]
         public IActionResult GetColaboradorList()
         {
-            var result = colaboradorRepository.GetColaboradorAll();
+            var result = colaboradorRepository.GetAll();
             if (result == null)
             {
                 return NotFound();
@@ -34,7 +34,7 @@ namespace WebApi_CottonKnit.Controllers
         [HttpGet("{id}")]
         public IActionResult GetColaboradorDetails(int id)
         {
-            var result = colaboradorRepository.GetColaboradorDetail(id);
+            var result = colaboradorRepository.GetDetail(id);
             if (result == null)
             {
                 return NotFound();

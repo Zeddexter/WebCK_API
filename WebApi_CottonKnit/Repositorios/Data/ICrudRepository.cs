@@ -8,12 +8,17 @@ namespace WebApi_CottonKnit.Repositorios
 {
     public interface ICrudRepository<T>
     {
-        object GetColaboradorAll();
-        object GetColaboradorDetail(int id);
-
-        bool Update(T colaborador);
+        object GetAll();
+        object GetDetail(int id);
+        bool Delete(int id);
+        bool Update(T obj);
+        bool Insert(T obj);
+        //IEnumerable<T> Gets();
+        //T Get(int id);
+    }
+    public interface ICrudIERepository<T>
+    {
         IEnumerable<T> Gets();
         T Get(int id);
-        bool Delete(int id);
     }
 }

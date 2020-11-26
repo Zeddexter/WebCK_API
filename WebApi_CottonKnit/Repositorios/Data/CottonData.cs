@@ -64,7 +64,7 @@ namespace WebApi_CottonKnit.Repositorios
                     conn.Open();
                     var query = stored;
                    var result = SqlMapper.Execute(conn, query, param: dyParam, commandType: CommandType.StoredProcedure);
-                    ber = result>0?true:false;
+                    ber = result == -1?true:false;
                 }
                 if (conn.State == ConnectionState.Open)
                 {                   
@@ -72,7 +72,7 @@ namespace WebApi_CottonKnit.Repositorios
                 }
             }
             catch (Exception ex)
-            {
+                {
                 throw ex;
             }
             return ber;

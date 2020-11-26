@@ -14,18 +14,13 @@ using WebApi_CottonKnit.Modelos;
 namespace WebApi_CottonKnit.Repositorios
 {
 
-    public class ColaboradorRepository : ICrudRepository<Colaborador>//IColaboradorRepository
+    public class ColaboradorRepository : ICrudRepository<Colaborador>
     {
         public bool Delete(int id)
         {
             throw new NotImplementedException();
         }
-        public Colaborador Get(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public object GetColaboradorAll()
+        public object GetAll()
         {
             try
             {
@@ -39,7 +34,7 @@ namespace WebApi_CottonKnit.Repositorios
                 throw ex;
             }
         }
-        public object GetColaboradorDetail(int id)
+        public object GetDetail(int id)
         {
             try
             {
@@ -55,24 +50,32 @@ namespace WebApi_CottonKnit.Repositorios
                 throw ex;
             }
         }
-
-        public IEnumerable<Colaborador> Gets()
-        {
-            try
-            {
-                CottonData db = new CottonData();
-                DbParametro[] parametro = new DbParametro[0];
-                return db.GetDataClass<Colaborador>("GETCK_FUNCIONARIOSWEB", parametro);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-        public bool Update(Colaborador colaborador)
+        public bool Update(Colaborador obj)
         {
             throw new NotImplementedException();
         }
+        public bool Insert(Colaborador obj)
+        {
+            throw new NotImplementedException();
+        }
+
+        //public IEnumerable<Colaborador> Gets()
+        //{
+        //    try
+        //    {
+        //        CottonData db = new CottonData();
+        //        DbParametro[] parametro = new DbParametro[0];
+        //        return db.GetDataClass<Colaborador>("GETCK_FUNCIONARIOSWEB", parametro);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        throw ex;
+        //    }
+        //}
+        /*public Colaborador Get(int id)
+        {
+            throw new NotImplementedException();
+        }*/
         /*IConfiguration Configuration;
         public ColaboradorRepository(IConfiguration _configuration)
         {

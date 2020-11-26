@@ -178,7 +178,6 @@ D:\Maycol\Repos\WebCK_API\WebApi_CottonKnit\bin\Debug\netcoreapp3.1\ru\Microsoft
 D:\Maycol\Repos\WebCK_API\WebApi_CottonKnit\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 D:\Maycol\Repos\WebCK_API\WebApi_CottonKnit\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 D:\Maycol\Repos\WebCK_API\WebApi_CottonKnit\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\Maycol\Repos\WebCK_API\WebApi_CottonKnit\obj\Debug\netcoreapp3.1\WebApi_CottonKnit.csprojAssemblyReference.cache
 D:\Maycol\Repos\WebCK_API\WebApi_CottonKnit\obj\Debug\netcoreapp3.1\WebApi_CottonKnit.AssemblyInfoInputs.cache
 D:\Maycol\Repos\WebCK_API\WebApi_CottonKnit\obj\Debug\netcoreapp3.1\WebApi_CottonKnit.AssemblyInfo.cs
 D:\Maycol\Repos\WebCK_API\WebApi_CottonKnit\obj\Debug\netcoreapp3.1\WebApi_CottonKnit.csproj.CoreCompileInputs.cache
@@ -191,3 +190,4 @@ D:\Maycol\Repos\WebCK_API\WebApi_CottonKnit\obj\Debug\netcoreapp3.1\WebApi_Cotto
 D:\Maycol\Repos\WebCK_API\WebApi_CottonKnit\obj\Debug\netcoreapp3.1\WebApi_CottonKnit.dll
 D:\Maycol\Repos\WebCK_API\WebApi_CottonKnit\obj\Debug\netcoreapp3.1\WebApi_CottonKnit.pdb
 D:\Maycol\Repos\WebCK_API\WebApi_CottonKnit\obj\Debug\netcoreapp3.1\WebApi_CottonKnit.genruntimeconfig.cache
+D:\Maycol\Repos\WebCK_API\WebApi_CottonKnit\obj\Debug\netcoreapp3.1\WebApi_CottonKnit.csprojAssemblyReference.cache

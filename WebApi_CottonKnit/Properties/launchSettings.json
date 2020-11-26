@@ -12,7 +12,7 @@
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
-      "launchUrl": "api/Colaborador",
+      "launchUrl": "api/UsersApi",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
@@ -20,7 +20,7 @@
     "WebApi_CottonKnit": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "api/Colaborador",
+      "launchUrl": "api/UsersApi",
       "applicationUrl": "http://localhost:5000",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
