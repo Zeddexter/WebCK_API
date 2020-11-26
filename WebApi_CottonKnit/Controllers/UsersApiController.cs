@@ -89,7 +89,9 @@ namespace WebApi_CottonKnit.Controllers
             try
             {
                 if (userApi == null)
+                {
                     return BadRequest();
+                }                   
                 if (userApi.Nombre.Trim() == string.Empty && userApi.Apellido_1.Trim() == string.Empty && userApi.Usuario.Trim() == string.Empty)
                 {
                     ModelState.AddModelError("error", "uno de los Siguietes datos están vacíos");
@@ -98,7 +100,7 @@ namespace WebApi_CottonKnit.Controllers
                 {
                     return BadRequest(ModelState);
                 }
-                if (userApi.Id.Trim() == string.Empty)
+                if (userApi.Id.Trim() == string.Empty || userApi.Id == null)
                 {
                     return BadRequest();
                 }
@@ -117,7 +119,7 @@ namespace WebApi_CottonKnit.Controllers
         {
             try
             {
-                if (id.Trim() == string.Empty)
+                if (id.Trim() == string.Empty|| id == null)
                 {
                     return BadRequest();
                 }                   
