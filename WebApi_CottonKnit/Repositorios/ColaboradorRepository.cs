@@ -16,17 +16,17 @@ namespace WebApi_CottonKnit.Repositorios
 
     public class ColaboradorRepository : ICrudRepository<Colaborador>
     {
-        public bool Delete(int id)
+        public Task<bool> Delete(int id)
         {
             throw new NotImplementedException();
         }
-        public object GetAll()
+        public async Task<object> GetAll()
         {
             try
             {
                 CottonData db = new CottonData();
                 DbParametro[] parametro = new DbParametro[0];
-                var colab = db.GetData("GETCK_FUNCIONARIOSWEB", parametro);
+                var colab = await db.GetData("GETCK_FUNCIONARIOSWEB", parametro);
                 return colab;
             }
             catch (Exception ex)
@@ -34,14 +34,14 @@ namespace WebApi_CottonKnit.Repositorios
                 throw ex;
             }
         }
-        public object GetDetail(int id)
+        public async Task<object> GetDetail(int id)
         {
             try
             {
                 CottonData db = new CottonData();
                 DbParametro[] parametro = new DbParametro[1];
                 parametro[0] = new DbParametro("pfuncionario", id);
-                var colab = db.GetData("GETCK_FUNCIONARIOSWEB", parametro);
+                var colab = await db.GetData("GETCK_FUNCIONARIOSWEB", parametro);
                 return colab;
 
             }
@@ -50,11 +50,11 @@ namespace WebApi_CottonKnit.Repositorios
                 throw ex;
             }
         }
-        public bool Update(Colaborador obj)
+        public Task<bool> Update(Colaborador obj)
         {
             throw new NotImplementedException();
         }
-        public bool Insert(Colaborador obj)
+        public Task<bool> Insert(Colaborador obj)
         {
             throw new NotImplementedException();
         }

@@ -9,7 +9,7 @@ namespace WebApi_CottonKnit.Repositorios
     public class UsersApiRepository : ICrudRepository<UsersApi>
     {
         CottonData db;
-        public bool Delete(int id)
+        public async Task<bool> Delete(int id)
         {
             try
             {
@@ -17,7 +17,7 @@ namespace WebApi_CottonKnit.Repositorios
                 DbParametro[] parametro = new DbParametro[2];
                 parametro[0] = new DbParametro("p_iduser",id);
                 parametro[1] = new DbParametro("p_userReg", "MHUAMANI");
-                var result = db.SetData("Deleredelapi_users", parametro);
+                var result = await db.SetData("Deleredelapi_users", parametro);
                 return result;
             }
             catch (Exception ex)
@@ -26,13 +26,13 @@ namespace WebApi_CottonKnit.Repositorios
             }
         }
 
-        public object GetAll()
+        public async Task<object> GetAll()
         {
             try
             {
                 db = new CottonData();
                 DbParametro[] parametro = new DbParametro[0];
-                var resul = db.GetData("getapi_users", parametro);
+                var resul = await db.GetData("getapi_users", parametro);
                 return resul;
             }
             catch (Exception ex)
@@ -41,14 +41,14 @@ namespace WebApi_CottonKnit.Repositorios
             }
         }
 
-        public object GetDetail(int id)
+        public async Task<object> GetDetail(int id)
         {
             try
             {
                 db = new CottonData();
                 DbParametro[] parametro = new DbParametro[1];
                 parametro[0] = new DbParametro("p_iduser", id);
-                var resul = db.GetData("getapi_users", parametro);
+                var resul = await db.GetData("getapi_users", parametro);
                 return resul;
             }
             catch (Exception ex)
@@ -57,7 +57,7 @@ namespace WebApi_CottonKnit.Repositorios
             }
         }
 
-        public bool Update(UsersApi obj)
+        public async Task<bool> Update(UsersApi obj)
         {
             try
             {
@@ -70,7 +70,7 @@ namespace WebApi_CottonKnit.Repositorios
                 parametro[4] = new DbParametro("p_usuario", obj.Usuario);
                 parametro[5] = new DbParametro("p_clave", obj.clave);
                 parametro[6] = new DbParametro("p_userreg", obj.UserReg);
-                var resul = db.SetData("updateapi_users", parametro);
+                var resul = await db.SetData("updateapi_users", parametro);
                 return resul;
             }
             catch (Exception ex)
@@ -78,7 +78,7 @@ namespace WebApi_CottonKnit.Repositorios
                 throw ex;
             }
         }
-        public bool Insert(UsersApi obj)
+        public async Task<bool> Insert(UsersApi obj)
         {
             try
             {
@@ -90,7 +90,7 @@ namespace WebApi_CottonKnit.Repositorios
                 parametro[3] = new DbParametro("p_usuario", obj.Usuario);
                 parametro[4] = new DbParametro("p_clave", obj.clave);
                 parametro[5] = new DbParametro("p_userreg", "MHUAMANI");
-                var resul = db.SetData("insertapi_users", parametro);
+                var resul = await db.SetData("insertapi_users", parametro);
                 return resul;
             }
             catch (Exception ex)
