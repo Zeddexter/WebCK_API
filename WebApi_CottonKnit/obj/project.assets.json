@@ -6163,11 +6163,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Maycol\\Repos\\WebCK_API\\WebApi_CottonKnit\\WebApi_CottonKnit.csproj",
+      "projectUniqueName": "D:\\Proyectos\\repos\\WebCK_API\\WebApi_CottonKnit\\WebApi_CottonKnit.csproj",
       "projectName": "WebApi_CottonKnit",
-      "projectPath": "D:\\Maycol\\Repos\\WebCK_API\\WebApi_CottonKnit\\WebApi_CottonKnit.csproj",
+      "projectPath": "D:\\Proyectos\\repos\\WebCK_API\\WebApi_CottonKnit\\WebApi_CottonKnit.csproj",
       "packagesPath": "C:\\Users\\sistemas13\\.nuget\\packages\\",
-      "outputPath": "D:\\Maycol\\Repos\\WebCK_API\\WebApi_CottonKnit\\obj\\",
+      "outputPath": "D:\\Proyectos\\repos\\WebCK_API\\WebApi_CottonKnit\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"

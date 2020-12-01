@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1qde8oIFuB9vQXsVWQq+vnHzC+sbph6LWp2fAm/j/AqaU808pChw+SYqmLoks4hObevh9PXZq4ViH4xsDZR8qQ==",
+  "dgSpecHash": "SIoRpNqMbOsbUVWXcrNkWJ1WKCEyYQ4r0EIVeG/RR/0SylgConbMrZBxeqfCasqqYb8U2pGVGnZvxqSj9WM7Ig==",
   "success": true,
-  "projectFilePath": "D:\\Maycol\\Repos\\WebCK_API\\WebApi_CottonKnit\\WebApi_CottonKnit.csproj",
+  "projectFilePath": "D:\\Proyectos\\repos\\WebCK_API\\WebApi_CottonKnit\\WebApi_CottonKnit.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sistemas13\\.nuget\\packages\\dapper\\2.0.35\\dapper.2.0.35.nupkg.sha512",
     "C:\\Users\\sistemas13\\.nuget\\packages\\dapper.oracle.netcore\\1.0.1\\dapper.oracle.netcore.1.0.1.nupkg.sha512",
