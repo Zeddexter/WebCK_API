@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "LAnTPyxvhBRu5gd4+Hnw9Y6dfMKTHOnqnX+MFK/S+6rBG4A6B+gTXHGVrAxNXievbSoLAwq+rVfmymnvIMAG8A==",
   "success": true,
   "projectFilePath": "F:\\Proyectos\\CottonKnit\\Web API\\WebApi_CottonKnit\\WebApi_CottonKnit.csproj",
+=======
+  "dgSpecHash": "SIoRpNqMbOsbUVWXcrNkWJ1WKCEyYQ4r0EIVeG/RR/0SylgConbMrZBxeqfCasqqYb8U2pGVGnZvxqSj9WM7Ig==",
+  "success": true,
+  "projectFilePath": "D:\\Proyectos\\repos\\WebCK_API\\WebApi_CottonKnit\\WebApi_CottonKnit.csproj",
+>>>>>>> 14a7bab6f51ad9acc6a170983e35b1be62391208
   "expectedPackageFiles": [
     "C:\\Users\\jtorres\\.nuget\\packages\\dapper\\2.0.35\\dapper.2.0.35.nupkg.sha512",
     "C:\\Users\\jtorres\\.nuget\\packages\\dapper.oracle.netcore\\1.0.1\\dapper.oracle.netcore.1.0.1.nupkg.sha512",

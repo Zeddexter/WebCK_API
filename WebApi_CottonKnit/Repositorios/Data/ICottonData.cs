@@ -7,7 +7,7 @@ namespace WebApi_CottonKnit.Repositorios
 {
     public interface ICottonData
     {
-        object GetData(string stored, DbParametro[] parametro);
-        bool SetData(string stored, DbParametro[] parametro);
+         Task<object> GetData(string stored, DbParametro[] parametro);
+        Task<bool> SetData(string stored, DbParametro[] parametro);
     }
 }

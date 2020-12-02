@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "F:\\Proyectos\\CottonKnit\\Web API\\WebApi_CottonKnit\\WebApi_CottonKnit.csproj": {}
   },
   "projects": {
@@ -12,6 +13,19 @@
         "projectPath": "F:\\Proyectos\\CottonKnit\\Web API\\WebApi_CottonKnit\\WebApi_CottonKnit.csproj",
         "packagesPath": "C:\\Users\\jtorres\\.nuget\\packages\\",
         "outputPath": "F:\\Proyectos\\CottonKnit\\Web API\\WebApi_CottonKnit\\obj\\",
+=======
+    "D:\\Proyectos\\repos\\WebCK_API\\WebApi_CottonKnit\\WebApi_CottonKnit.csproj": {}
+  },
+  "projects": {
+    "D:\\Proyectos\\repos\\WebCK_API\\WebApi_CottonKnit\\WebApi_CottonKnit.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Proyectos\\repos\\WebCK_API\\WebApi_CottonKnit\\WebApi_CottonKnit.csproj",
+        "projectName": "WebApi_CottonKnit",
+        "projectPath": "D:\\Proyectos\\repos\\WebCK_API\\WebApi_CottonKnit\\WebApi_CottonKnit.csproj",
+        "packagesPath": "C:\\Users\\sistemas13\\.nuget\\packages\\",
+        "outputPath": "D:\\Proyectos\\repos\\WebCK_API\\WebApi_CottonKnit\\obj\\",
+>>>>>>> 14a7bab6f51ad9acc6a170983e35b1be62391208
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"

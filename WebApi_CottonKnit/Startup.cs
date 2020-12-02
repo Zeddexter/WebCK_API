@@ -12,6 +12,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using WebApi_CottonKnit.Modelos;
 using WebApi_CottonKnit.Repositorios;
+using WebApi_CottonKnit.Repositorios.Interfaces;
 
 namespace WebApi_CottonKnit
 {
@@ -29,7 +30,8 @@ namespace WebApi_CottonKnit
         {
             services.AddTransient<ICrudRepository<Colaborador>, ColaboradorRepository>();
             services.AddTransient<ICrudRepository<UsersApi>, UsersApiRepository>();
-            //services.AddSingleton<IConfiguration>(Configuration);
+            services.AddTransient<ILectStikersRepository<Stikers>, LectStikersRepository>();
+            //services.AddSingleton<IConfiguration>(Configuration);  
             services.AddCors(options =>
             {
                 options.AddPolicy("AllowAnyCorsPolicy", policy => policy.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());

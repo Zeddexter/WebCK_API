@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.IO;
+using System.Threading.Tasks;
 using Dapper;
 using Dapper.Oracle;
 using Microsoft.Extensions.Configuration;
@@ -12,7 +13,7 @@ namespace WebApi_CottonKnit.Repositorios
 {
     public class CottonData : ICottonData
     {
-        public object GetData(string stored, DbParametro[] parametro)
+        public async Task<object> GetData(string stored, DbParametro[] parametro)
         {
             object result = null;
             try
@@ -31,7 +32,7 @@ namespace WebApi_CottonKnit.Repositorios
                 {
                     conn.Open();
                     var query = stored;
-                    result = SqlMapper.Query(conn, query, param: dyParam, commandType: CommandType.StoredProcedure);
+                    result = await SqlMapper.QueryAsync(conn, query, param: dyParam, commandType: CommandType.StoredProcedure);
                 }
                 if (conn.State == ConnectionState.Open)
                 {                                    
@@ -45,7 +46,7 @@ namespace WebApi_CottonKnit.Repositorios
             return result;
         }
 
-        public bool SetData(string stored, DbParametro[] parametro)
+        public async Task<bool> SetData(string stored, DbParametro[] parametro)
         {
             bool ber = false;
             try
@@ -63,8 +64,8 @@ namespace WebApi_CottonKnit.Repositorios
                 {
                     conn.Open();
                     var query = stored;
-                   var result = SqlMapper.Execute(conn, query, param: dyParam, commandType: CommandType.StoredProcedure);
-                    ber = result == -1?true:false;
+                   var result = await SqlMapper.ExecuteAsync(conn, query, param: dyParam, commandType: CommandType.StoredProcedure);
+                    ber = result == -1 ? true : false;
                 }
                 if (conn.State == ConnectionState.Open)
                 {                   

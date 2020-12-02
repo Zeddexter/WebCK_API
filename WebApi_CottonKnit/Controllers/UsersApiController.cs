@@ -19,11 +19,11 @@ namespace WebApi_CottonKnit.Controllers
         }
 
         [HttpGet]
-        public IActionResult GetUserApiAll()
+        public async Task<IActionResult> GetUserApiAll()
         {
             try
             {
-                var result = _crudRepository.GetAll();
+                var result = await _crudRepository.GetAll();
                 if (result == null)
                 {
                     return NotFound();
@@ -36,11 +36,11 @@ namespace WebApi_CottonKnit.Controllers
             }
         }
         [HttpGet("{id}")]
-        public IActionResult GetUserDetail(string id)
+        public async Task<IActionResult> GetUserDetail(string id)
         {
             try
             {
-                var result = _crudRepository.GetDetail(Convert.ToInt32(id));
+                var result = await _crudRepository.GetDetail(Convert.ToInt32(id));
                 if (result == null)
                 {
                     return NotFound();
@@ -54,7 +54,7 @@ namespace WebApi_CottonKnit.Controllers
         }
 
         [HttpPost]
-        public IActionResult insertUserApi([FromBody] UsersApi usersApi)
+        public async Task<IActionResult> insertUserApi([FromBody] UsersApi usersApi)
         {
             try
             {
@@ -73,7 +73,7 @@ namespace WebApi_CottonKnit.Controllers
                 bool created = true;
                 if (usersApi.Id == string.Empty || usersApi.Id == null)
                 {
-                    created = _crudRepository.Insert(usersApi);
+                    created = await _crudRepository.Insert(usersApi);
                 }
                 return Created("created", created);
             }
@@ -84,12 +84,14 @@ namespace WebApi_CottonKnit.Controllers
         }
 
         [HttpPut]
-        public IActionResult UpdateUsersApi([FromBody] UsersApi userApi)
+        public async Task<IActionResult> UpdateUsersApi([FromBody] UsersApi userApi)
         {
             try
             {
                 if (userApi == null)
+                {
                     return BadRequest();
+                }                   
                 if (userApi.Nombre.Trim() == string.Empty && userApi.Apellido_1.Trim() == string.Empty && userApi.Usuario.Trim() == string.Empty)
                 {
                     ModelState.AddModelError("error", "uno de los Siguietes datos están vacíos");
@@ -98,11 +100,11 @@ namespace WebApi_CottonKnit.Controllers
                 {
                     return BadRequest(ModelState);
                 }
-                if (userApi.Id.Trim() == string.Empty)
+                if (userApi.Id.Trim() == string.Empty || userApi.Id == null)
                 {
                     return BadRequest();
                 }
-                _crudRepository.Update(userApi);
+                await _crudRepository.Update(userApi);
 
                 return NoContent();
             }
@@ -113,15 +115,15 @@ namespace WebApi_CottonKnit.Controllers
         }
 
         [HttpDelete("{id}")]
-        public IActionResult DeleteUserApi(string id)
+        public async Task<IActionResult> DeleteUserApi(string id)
         {
             try
             {
-                if (id.Trim() == string.Empty)
+                if (id.Trim() == string.Empty|| id == null)
                 {
                     return BadRequest();
                 }                   
-                _crudRepository.Delete(Convert.ToInt32(id));
+                await _crudRepository.Delete(Convert.ToInt32(id));
                 return NoContent();
             }
             catch (Exception ex)
