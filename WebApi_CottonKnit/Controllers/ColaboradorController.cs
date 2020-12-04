@@ -21,14 +21,21 @@ namespace WebApi_CottonKnit.Controllers
         }
         //[Route("api/GetColaboradorList")]
         [HttpGet]
-        public IActionResult GetColaboradorList()
+        public async Task<IActionResult> GetColaboradorList()
         {
-            var result = colaboradorRepository.GetAll();
-            if (result == null)
+            try
             {
-                return NotFound();
+                var result = await colaboradorRepository.GetAll();
+                if (result == null)
+                {
+                    return NotFound();
+                }
+                return Ok(result);
             }
-            return Ok(result);
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
         //[Route("api/GetColaboradorDetails/{idCol}")]
         [HttpGet("{id}")]
@@ -41,6 +48,5 @@ namespace WebApi_CottonKnit.Controllers
             }
             return Ok(result);
         }
-
     }
 }
