@@ -9,5 +9,8 @@ namespace WebApi_CottonKnit.Modelos
     {
         public int OP { get; set; }
 
+        public int CANT_PROG { get; set; }
+        public int CANT_PROD { get; set; }
+        public int CODIGO_FAMILIA { get; set; }
     }
 }
