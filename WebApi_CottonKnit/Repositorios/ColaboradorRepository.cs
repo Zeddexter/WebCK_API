@@ -58,6 +58,5 @@ namespace WebApi_CottonKnit.Repositorios
         {
             throw new NotImplementedException();
         }
-
     }
 }
